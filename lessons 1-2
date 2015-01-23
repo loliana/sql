@@ -1,0 +1,73 @@
+lesson 1.
+SQL CREATE TABLE Syntax
+The column_name parameters specify the names of the columns of the table.
+The data_type parameter specifies what type of data the column can hold (e.g. varchar, integer, decimal, date, etc.). Varchar - поле с переменной длиной, состоящей из characters
+The size parameter specifies the maximum length of the column of the table.
+
+Lesson 2.
+Data definition language - create objectType objectName, alter , drop (delete)
+Data manipulation language
+Data retrieval language
+Data control language
+Transaction control language
+
+Data types: 
+Numeric (int (bigint - 8 bytes, int - 4 bytes, smallint - 2 bytes,  tinyint - 1 byte), 
+decimal (numeric), float (real), money,bit), 
+decimal is more accurate than float. decimal takes up more space than float
+money - 8 bytes, smallmoney - 4 bytes
+bit is a single bit of data, values are 0 or 1. Can also be represented as False or True.
+
+characters (char(), varchar(), text, nchar, 
+char holds extended ASCII,nchar holds Unicode and nchar character takes up twice the space of an char character.
+DateTime -  types: datetime, date, time 
+Binary- types: binary, varbinary, image (same as varbinary (max))
+null - indicates that nothing was stored in the field.
+
+example of a create table:
+cteate table Persons
+(
+  LastName varchar(255),
+  FirswtName varchar(255),
+  Age tinyint,
+  Gender char(1),
+  Married bit
+)
+
+Field constraints
+Constraints on fields definitions:
+not null
+unique
+check
+default
+
+example of a create table using constraints:
+(
+  PersonID INT UNIQUE NOT NULL
+  LastName varchar(255),
+  FirswtName varchar(255),
+  Age tinyint,
+  Gender char(1),
+  Married bit
+)
+
+Primary Keys - uniquely identifies each record in a table.
+CREATE TABLE Persons
+(
+  PersonID int PRIMARY KEY
+  ...
+)
+
+SQL Server uses the IDENTITY attribute
+IDENTITY (n,m)
+n is the starting value
+m is the amount to increment
+
+SQL Data Manipulation Language
+Insert into
+Update
+Delete
+Truncate
+
+
+
